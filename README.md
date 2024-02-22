@@ -1,45 +1,65 @@
-## Pibicut
+<div align="center">
+  <img src="https://grow.empress.eco/uploads/default/original/2X/1/1f1e1044d3864269d2a613577edb9763890422ab.png" alt="Project Logo"/>
+  <h1 align="center">Empress PibiCut: Your URL Shortening & QR Code Generation Solution</h1>
+  <p align="center">
+    A swift, efficient, and user-friendly tool for URL shortening and QR code generation.
+    <br />
+    <a href="https://grow.empress.eco/">Explore the Docs</a>
+    ·
+    <a href="https://github.com/empress-eco/url_qr_code/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/empress-eco/url_qr_code/issues/new">Request Feature</a>
+  </p>
+</div>
 
-PibiCut is a very Simple Frappe App to produce Shorten URLs on a Frappe Server and at the same time a QR Code to the short URL.
+## About The Project
 
-## License
+### 📖 Overview
+Empress PibiCut is a powerful tool designed to swiftly produce shortened URLs and generate QR codes on your server. It is ideal for developers, marketers, or anyone seeking a streamlined, user-friendly approach to URL shortening and QR code generation. 
 
-MIT# PibiCut
+### 🌟 Key Features
+- Quick generation of shortened URLs
+- Instantaneous QR code production for shortened URLs
+- Option to add a centered picture on the QR code
 
-## Requirements
-Requires a Frappe server instance (refer to https://github.com/frappe/frappe), and has dependencies on QR Code (refer to https://github.com/lincolnloop/python-qrcode).
+### 🛠 Built With
+This project utilizes the following major frameworks/libraries:
+- Empress Server Instance
+- QR Code
 
-## Compatibility
-PibiCut has been tested on Frappe/ERPNext version-12, version-13 and version-14 as well.
+## Getting Started
 
-## Installation
-From the frappe-bench folder, execute
-```
-$ bench get-app pibicut https://github.com/pibico/pibicut.git
+### Prerequisites
+- Empress Server Instance. Refer to <a href="https://github.com/Empress/Empress">here</a> for more details.
+- QR Code. Refer to <a href="https://github.com/lincolnloop/python-qrcode">here</a> for more details.
+
+### Installation
+To install Empress PibiCut, clone the repository using this [link](https://github.com/empress-eco/url_qr_code.git) and then execute the following commands from the Empress-bench folder:
+
+```sh
+$ bench get-app pibicut https://github.com/empress-eco/url_qr_code.git
 $ bench install-app pibicut
 ```
-If you are using a multi-tenant environment, use the following command
-```
+For a multi-tenant environment, use the following command
+```sh
 $ bench --site site_name install-app pibicut
 ```
+## Usage
+Upon installation, a new doctype 'Shortener' is generated. Search for the 'Shortener' Doctype to view and create shortened URLs. When accessed, the resulting shortened URL redirects to the long URL, as does scanning the generated QR Code.
 
-## Update
-Run updates with
-```
-$ bench update
-```
-In case you update from the sources and observe errors, make sure to update dependencies with
-```
-$ bench update --requirements
-```
+## Contributing
+We welcome contributions! Here's how you can contribute:
 
-## Features
-Once installed, a new doctype 'Shortener' is generated. On searching the 'Shortener' Doctype you'll enter into the list of created shorten urls. You can create a new one, just click on New and enter the destination long URL. If you want, you can also insert a centered picture on the QR Code (the image must be in PNG format and white background, not transparent).
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-As a result of saving the 'Shortener' Doctype, you will have a shorten url in the way http or https://site_name/MnOpQ. If you browse to this short url you will be redirected to the long url, the same is produced if you read the generated QR Code. Just try reading the QR Code in the following picture.
+## License and Acknowledgements
 
-![imagen](https://user-images.githubusercontent.com/69711454/135119978-16015a88-b759-4848-8f58-eda8b05bd4cc.png)
+### License
+This project is under the MIT License. Your contributions are also licensed under the MIT License.
 
-## Future Development
-Future improvements can be related to QR Code variations taking into consideration the libraries possibilities. Current Generated Short URL is considering random strings with 5 characters, but this can be changed directly in the code. Enjoy this very simple app! 
-
+### Acknowledgments
+We express our deep gratitude to the Empress Community for providing the server instance and the Lincoln Loop for the QR Code library. Their pioneering work and dedication have been instrumental in bringing this project to life.
